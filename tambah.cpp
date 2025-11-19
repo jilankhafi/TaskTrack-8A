@@ -1,15 +1,18 @@
-#include <iostream>
+/*
+input library yang akan digunakan
+kedalam Function nya
+*/
+#include <iostream>   
 #include <fstream>
 #include <string>
 using namespace std;
 
-// bagian michael //
-
 int tambahTugas() {
+    // deklarasi varabel 
     string namaTugas, deadline, prioritas;
     int nilaiPrioritas;
 
-    getline(cin, namaTugas);
+    getline(cin, namaTugas); //memberihkan buffer dari cin
 
     cout << "Masukkan nama tugas: ";
     getline(cin, namaTugas);
@@ -44,4 +47,5 @@ int tambahTugas() {
 
     return 1;
 }
+//bagian mcihael
 
