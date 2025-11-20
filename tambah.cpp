@@ -6,15 +6,14 @@ using namespace std;
 
 int tambahTugas() {
     // deklarasi variabel
-    string namaTugas, deadline, prioritas;
-    string inputPrioritas;
+    string namaTugas, deadline, prioritas , inputPrioritas;
     string pilihan[3] = {"1", "2", "3"};  
 
     getline(cin, namaTugas); // membersihkan buffer
 
     cout << "Masukkan nama tugas: ";
     getline(cin, namaTugas);
-
+    
     cout << "Masukkan deadline (contoh: 2025-11-15): ";
     getline(cin, deadline);
 
@@ -26,7 +25,6 @@ int tambahTugas() {
         cout << "2. Sedang\n";
         cout << "3. Rendah\n";
         cout << "Pilih menu [1/2/3]: ";
-
         cin >> inputPrioritas;
 
         if (inputPrioritas == pilihan[0]) {
@@ -44,9 +42,7 @@ int tambahTugas() {
         else {
             cout << "Input tidak valid!\n\n";
         }
-
     }
-
     ofstream file("tugas.txt", ios::app);
     file << namaTugas << " | " << deadline << " | " << prioritas << endl;
     file.close();
