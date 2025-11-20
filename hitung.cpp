@@ -18,3 +18,4 @@ int hitungTotalTugas() {
 
     file.close();
     return total;
+}
