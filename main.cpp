@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 // Import semua file modular
@@ -9,8 +10,7 @@ using namespace std;
 #include "hitung.cpp"
 
 int main() {
-    int pilihan;
-
+    string pilihan;
     while (true) {
         cout << "\n===== MENU TUGAS =====\n";
         cout << "1. Tambah Tugas\n";
@@ -20,23 +20,33 @@ int main() {
         cout << "5. Hitung Total Tugas\n";
         cout << "6. Keluar\n";
         cout << "Pilih menu: ";
+
         cin >> pilihan;
 
-        if (pilihan == 1) {
+        if (pilihan == "1") {
             int status = tambahTugas();
             if (status == 1)
                 cout << "Tugas berhasil disimpan!\n";
         }
-        else if (pilihan == 2) lihatTugas();
-        else if (pilihan == 3) hapusSemuaTugas();
-        else if (pilihan == 4) cariTugas();
-        else if (pilihan == 5)
+        else if (pilihan == "2") {
+            lihatTugas();
+        }
+        else if (pilihan == "3") {
+            hapusSemuaTugas();
+        }
+        else if (pilihan == "4") {
+            cariTugas();
+        }
+        else if (pilihan == "5") {
             cout << "Total tugas: " << hitungTotalTugas() << endl;
-        else if (pilihan == 6) {
+        }
+        else if (pilihan == "6") {
             cout << "Selamat Tinggal!\n";
             break;
         }
-        else cout << "Menu tidak valid!\n";
+        else {
+            cout << "Menu tidak valid! Harap masukkan 1 - 6.\n";
+        }
     }
 
     return 0;
