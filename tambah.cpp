@@ -49,3 +49,5 @@ int tambahTugas() {
 
     return 1;
 }
+//anjay dah selesai wakkk
+//gacor gacor
